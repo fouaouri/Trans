@@ -1,0 +1,24 @@
+# version: '3.8'
+
+services:
+
+  frontend:
+    image: 'frontend'
+    build: 'ft_transcendance/frontend'
+    container_name: 'frontend'
+    restart: 'always'
+    volumes:
+      - ./ft_transcendance/frontend:/app
+    ports:
+      - 8080:8080
+    networks:
+      - ft_transcendance
+
+networks:
+  ft_transcendance:
+    name: ft_transcendance
+    driver_opts:
+      type: bridge
+
+volumes:
+  postgres_data:
