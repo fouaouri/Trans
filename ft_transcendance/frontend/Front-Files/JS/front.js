@@ -432,10 +432,10 @@ function checkUserLoginFromBackend() {
                 e.preventDefault();
                 navigateTo('settingContent', '../Css/Setting.css',  '/Settings');
             });
-            // document.getElementById('Chat').addEventListener('click', (e) => {
-            //     e.preventDefault();
-            //     navigateTo('ChatContent', '../Css/Chat.css', '/Chat');
-            // });
+            document.getElementById('Chat').addEventListener('click', (e) => {
+                e.preventDefault();
+                navigateTo('ChatContent', '../Css/Chat.css', '/Chat');
+            });
         // } 
         // else {
         //     console.log(data.isLoggedIn);

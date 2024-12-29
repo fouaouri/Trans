@@ -54,7 +54,59 @@
 		<template id="Regester">
 			<div class="rectangle">
 				<div class="top-header">
-					<h3>Sign Up, Now!</h3>
+					<h3>Sign Up, Now!</h<!-- <div class="row no-gutters">
+					
+						<aside class="col-md-4 border-right user-list" id="user-list-container">
+							<div class="search-box">
+								<div class="input-wrapper">
+									<i class="material-icons">search</i>
+									<input id="search-input" placeholder="Search users..." aria-label="Search users">
+								</div>
+							</div>
+							<ul id="user-list" class="list-group">
+								
+							</ul>
+						</aside>
+	
+						<section class="col-md-8 profile-panel" id="profile-container">
+							<div class="placeholder-message">
+								<img class="placeholder-image" src="../assets/images/chats.png" alt="No Chat">
+								<p>Select a user from the list to start a chat.</p>
+							</div>
+						</section>
+			
+						
+						<section class="col-md-8 chat-panel d-none" id="chat-container">
+							<div class="settings-tray">
+								<div class="friend-drawer">
+									
+									<img class="profile-image" src="" alt="Profile Picture">
+									<div class="user-info">
+										<h6 id="recipient-username"></h6>
+									</div>
+									<div class="settings-menu">
+										<i class="material-icons">menu</i>
+										<ul class="menu-options">
+											<li><a href="#" id="invite-game">Invite to Game</a></li>
+											<li><a href="#" id="clear-chat">Clear Chat</a></li>
+											<li><a href="#" id="block-user">Block User</a></li>
+											<li><a href="#" id="view-profile">View Profile</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+			
+							<div id="chat-box" class="chat-messages">
+							</div>
+			
+							<div class="chat-box-tray">
+								<input type="text" id="chat-input" placeholder="Type your message here...">
+								<button id="send-button" class="btn btn-dark">
+									<i class="material-icons">send</i>
+								</button>
+							</div>
+						</section>
+					</div> -->3>
 					<small>We are happy to have you with us.</small>
 				</div>
 				<form class="Info">
@@ -126,74 +178,19 @@
 		<template id="ChatContent">
 
 			<div class="container">
-				<div class="row no-gutters">
-					<!-- User List Section -->
-					<aside class="col-md-4 border-right user-list" id="user-list-container">
-						<div class="search-box">
-							<div class="input-wrapper">
-								<i class="material-icons">search</i>
-								<input id="search-input" placeholder="Search users..." aria-label="Search users">
-							</div>
-						</div>
-						<ul id="user-list" class="list-group">
-							<!-- User items will be populated dynamically by JavaScript -->
-						</ul>
-					</aside>
-		
-					
-					<!-- Placeholder Profile Section (when no chat room is active) -->
-					<section class="col-md-8 profile-panel" id="profile-container">
-						<div class="placeholder-message">
-							<img class="placeholder-image" src="../assets/images/chats.png" alt="No Chat">
-							<p>Select a user from the list to start a chat.</p>
-						</div>
-					</section>
-		
-					<!-- Chat Section (when a chat room is active) -->
-					<section class="col-md-8 chat-panel d-none" id="chat-container">
-						<div class="settings-tray">
-							<div class="friend-drawer">
-								<!-- Profile Photo -->
-								<img class="profile-image" src="" alt="Profile Picture">
-								<!-- User Information -->
-								<div class="user-info">
-									<h6 id="recipient-username"></h6>
-								</div>
-								<!-- Menu -->
-								<div class="settings-menu">
-									<i class="material-icons">menu</i>
-									<ul class="menu-options">
-										<li><a href="#" id="invite-game">Invite to Game</a></li>
-										<li><a href="#" id="clear-chat">Clear Chat</a></li>
-										<li><a href="#" id="block-user">Block User</a></li>
-										<li><a href="#" id="view-profile">View Profile</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-		
-						<!-- Chat Box -->
-						<div id="chat-box" class="chat-messages">
-							<!-- Chat messages will be dynamically loaded here -->
-						</div>
-		
-						<div class="chat-box-tray">
-							<input type="text" id="chat-input" placeholder="Type your message here...">
-							<button id="send-button" class="btn btn-dark">
-								<i class="material-icons">send</i>
-							</button>
-						</div>
-					</section>
+				<div class="users-container" id="users-container">
+
+					<div class="person-selector" id="person-selector">
+						
+					</div>
 				</div>
 			</div>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<link rel="stylesheet" href="../Css/bootstrap.css">
 			<link rel="stylesheet" href="../Css/Chat.css">
+			<!-- <link rel="stylesheet" href="../Css/bootstrap.css">
 			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 			<script src="../JS/jquery-3.7.1.slim.min.js" ></script>
 			<script src="../JS/popper.min.js" defer></script>
-			<script src="../JS/bootstrap.js" defer></script>
+			<script src="../JS/bootstrap.js" defer></script> -->
 			<script src="../JS/Chat.js" defer></script>
 
 		</template>

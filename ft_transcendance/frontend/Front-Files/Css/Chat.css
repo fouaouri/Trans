@@ -1,19 +1,5 @@
-/* Keyframes for fade-in effect */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* Optional: adds a slight slide-up effect */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
-/* Optional: For larger elements like chat-messages */
-.chat-messages {
-    animation: fadeIn 1s ease-in-out;
-}
+
 
 @font-face {
     font-family: 'Carbo';
@@ -114,22 +100,40 @@ button {
     color: transparent;
 }
 
-.sidebar {
-    /* margin: 180px auto; */
-    position: fixed; /* Fix the sidebar to the left side of the window */
-    top: 0;
-    left: 10%;
-    width: 80px; /* Width of the sidebar */
-    height: 65%; /* Full viewport height */
-    background: hsl(120, 8%, 28%); /* Dark grey background */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 90%;
+    width: 80%;
+    background:  rgb(20 51 33 / 50%);
+    padding: 20px;
+    border-radius: 20px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
-    box-shadow: 3px 0px 6px hsl(0, 2%, 58%); /* Optional shadow for the sidebar */
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.90);
+    position: relative;
+}
+
+.users-container {
+    position: absolute;
+    margin: 2% auto;
+    width: 25;
+    height: 90%;
+    background: hsl(120, 8%, 28%);
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0;
+    box-shadow: 3px 0px 6px hsl(0, 2%, 58%);
   }
+
+.person-selector-button{
+    display: flex;
+    padding: 2% 0;
+}
   
   .top-icons {
-    flex: 1; /* Take up remaining space */
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center; /* Center icons horizontally */
@@ -157,21 +161,7 @@ button {
     left: 10%;
 }
 
-  .container {
-    width: 100%;
-    max-width: 1200px; /* Set a maximum width for the container */
-    height: 90%; /* Set a fixed height (80% of the viewport height) */
-    width: 80%;
-    /* margin: 100px auto; */
-    background:  rgb(20 51 33 / 50%); /* Dark grey background */
-    padding: 20px;
-    border-radius: 20px;
-    overflow: hidden; /* Hide any overflow outside the container */
-    display: flex;
-    flex-direction: column; /* Arrange children vertically */
-    box-shadow: 0 0 50px rgba(0, 255, 0, 0.90); /* Optional shadow for the sidebar */
-    position: relative; /* Make container relative to position scroll buttons */
-}
+
 
 /* Scroll button styles */
 .scroll-button {
