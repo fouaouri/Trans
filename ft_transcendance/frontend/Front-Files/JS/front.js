@@ -173,31 +173,36 @@ function EditContent(){
     
 }
 
-function ProfileContent(){
-    fetch('http://localhost:8000/api/user/', {
-        method: 'GET',
-        credentials: 'include',
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error("Network response was not ok");
-        }
-        return response.json();
-    })
-    .then(data => {
-        console.log(data.image_link);
-        const profileImg = document.getElementById('profile');
-        profileImg.src = data.image_link;
-        document.getElementById("fullName").textContent = data.full_name || "N/A";
-        document.getElementById("userName").textContent = data.username || "N/A";
-        document.getElementById("Mail").textContent = data.email || "N/A";
-        document.getElementById("Avatar").textContent = data.avatar || "N/A";
-        document.getElementById("City").textContent = data.city || "N/A";
-    })
-    .catch(error => {
-        console.error("There was a problem fetching the data:", error);
-    });
-}
+
+// function ProfileContent(){
+//     fetch('http://localhost:8000/api/user/', {
+//         method: 'GET',
+//         credentials: 'include',
+//     })
+//     .then(response => {
+//         if (!response.ok) {
+//             throw new Error("Network response was not ok");
+//         }
+//         return response.json();
+//     })
+//     .then(data => {
+//         console.log(data.image_link);
+//         const profileImg = document.getElementById('profile');
+//         profileImg.src = data.image_link;
+//         document.getElementById("fullName").textContent = data.full_name || "N/A";
+//         document.getElementById("userName").textContent = data.username || "N/A";
+//         document.getElementById("Mail").textContent = data.email || "N/A";
+//         document.getElementById("Avatar").textContent = data.avatar || "N/A";
+//         document.getElementById("City").textContent = data.city || "N/A";
+//     })
+//     .catch(error => {
+//         console.error("There was a problem fetching the data:", error);
+//     });
+
+//     startScrooling();
+// }
+
+
 function LoadContent(templateId){
     const template = document.getElementById(templateId);
     if (!template) {
@@ -215,6 +220,8 @@ function LoadContent(templateId){
             navigateTo('firstContent', '../Css/first_page.css',  '/LoginPage')
         });
     }
+    // if(templateId === 'ChatContent')
+    //     ChatContent();
     if(templateId === 'homeContent')
         HomeContent();
     if(templateId === 'gameContent')
@@ -227,8 +234,8 @@ function LoadContent(templateId){
         EditContent();
     if(templateId === 'ChooseAi')
         Aigame();
-    if(templateId === 'ProfileContent')
-        ProfileContent();
+    // if(templateId === 'ProfileContent')
+    //     ProfileContent();
     if(templateId === 'Regester'){
         const info = document.querySelector('.Info');
 
@@ -473,6 +480,9 @@ function handleRouting(path){
             break;
         case '/Home':
             navigateTo('homeContent', '../Css/Home.css', '/Home');
+            break;
+        case '/Profile':
+            navigateTo('ProfileContent', '../Css/Profile.css',  '/Profile');
             break;
         case '/Game':
             navigateTo('gameContent', '../Css/Game.css', '/Game');

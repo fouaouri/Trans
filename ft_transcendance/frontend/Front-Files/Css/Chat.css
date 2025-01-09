@@ -35,8 +35,8 @@ body, html {
 .logo{
     position: absolute;
     top: 2%;
-    left: 45.7%;
-    width: 150px;
+    left: 46.1%;
+    width: 120px;
     height: auto;
 }
 
@@ -118,20 +118,90 @@ button {
 .users-container {
     position: absolute;
     margin: 2% auto;
-    width: 25;
+    width: 25%;
     height: 90%;
-    background: hsl(120, 8%, 28%);
+    background: hsla(120, 22%, 74%, 0.861);
     display: flex;
     flex-direction: column;
     padding: 5% 0;
-    box-shadow: 3px 0px 6px hsl(0, 2%, 58%);
+    /* box-shadow: 3px 0px 6px hsl(0, 2%, 58%); */
+    border-radius: 20px;
   }
 
 .person-selector-button{
     display: flex;
     padding: 2% 0;
+    margin-bottom: 8%;
 }
+
+.divider{
+    border-bottom: 1px solid #888989;
+    margin: 6% 0;
+}
+
+.chat-container{
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    left: 30%;
+    margin: 2% auto;
+    width: 65%;
+    height: 90%;
+    padding: 5% 0;
+    box-shadow: 3px 0px 6px hsl(0, 2%, 58%);
+    border-radius: 20px;
+}
+
+.chat-box {
+    flex-grow: 1; /* Allows the chat box to take the remaining space */
+    overflow-y: auto; /* Scroll when messages overflow */
+    padding: 10px;
+    /* background-color: #f9f9f9; */
+  }
   
+  .sent-input {
+    margin-top: auto; /* Pushes the input field to the bottom */
+    padding: 10px;
+    /* background-color: #fff; */
+    /* border-top: 1px solid #ccc; */
+  }
+  
+  .chat-input input {
+    width: calc(100% - 100px); /* Take full width minus button space */
+    padding: 10px;
+  }
+  
+  .chat-input button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .chat-input button:hover {
+    background-color: #0056b3;
+  }
+h2{
+    font-size: 120%;
+    margin-bottom: 10%;
+    margin-top: 0;
+}
+
+/* .sent-input{
+
+} */
+
+#message-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
   .top-icons {
     flex: 1;
     display: flex;
@@ -198,12 +268,12 @@ button {
 
 /* Styling for the user list */
 #user-list {
-    padding: 0;
-    margin: 0;
-    animation: fadeIn 0.6s ease-in-out; /* Apply fadeIn animation for user list */
+    padding: 2%;
+    margin-top: 10%;
+    animation: fadeIn 2s ease-in-out; /* Apply fadeIn animation for user list */
 }
 
-.user-item {
+.all-users {
     list-style: none;
     margin-bottom: 10px;
     animation: fadeIn 0.6s ease-in-out; /* Fade in for each user item */
@@ -296,9 +366,9 @@ hr {
 .chat-panel {
     display: flex;
     flex-direction: column;
-    left: 1.2%;
-    height: 71%; /* Make chat panel take up full height of its container */
-    background: hsl(120, 8%, 28%);
+    right: -33%;
+    height: 71%;
+    background: hsl(120, 8%, 15%);
     border-radius: 20px;
 }
 
@@ -360,27 +430,28 @@ hr {
 }
 
 .search-box input {
+    font-family: monospace;
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 8px;
     width: 100%;
     box-shadow: 0 2px 4px rgba(187, 161, 161, 0.1);
 }
 
 .search-box .material-icons {
-    margin-right: 8px;
-    color: #888;
+    width: 10%;
+    margin-right: 3%;
 }
 
 input {
     border: none;
-    border-radius: 30px;
+    border-radius: 20px;
     width: 80%;
-    color: hsl(123, 32%, 56%); /* White text */
+    color: hsl(122, 100%, 16%);
 }
 
 input::placeholder {
-    color: rgb(73, 75, 73); /* Light grey placeholder text */
+    color: rgba(50, 52, 50, 0.612);
     font-weight: 300;
     margin-left: 20px;
 }
@@ -431,13 +502,13 @@ input:focus {
 }
 
 /* Icon in settings tray */
-.settings-tray--right i {
+.header--right i {
     font-size: 25px; /* Adjust size as needed */
     color: hsl(120, 59%, 44%); /* Grey color */
     transition: color 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
-.settings-tray--right i:hover {
+.header--right i:hover {
     color: hsl(120, 59%, 44%); /* Green color on hover */
     cursor: pointer;
     box-shadow: 3px 0px 6px rgb(0, 0, 0); /* Shadow on hover */
@@ -574,34 +645,31 @@ input:focus {
 
 
 /* Placeholder Message Styling */
-.placeholder-message {
-    padding: 15px;
-    text-align: center; /* Center the message text */
+.message-container {
+    text-align: center;
     color: hsl(0, 0%, 100%);
-    font-size: 20px;
+    font-size: 150%;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    height: 90vh; /* Set height relative to the viewport height */
-    max-height: none; /* Disable the max-height constraint */
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    margin-top: -15%; /* Move content down from the top */
-
+    justify-content: center;
+    align-items: center;
+    width: 200%;
+    height: 100%;
+    overflow-y: 100%;
+    margin-top: -15%;
 }
 
-.placeholder-image {
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    border-radius: 4px; /* Slightly rounded corners, adjust if needed */
-    /* margin-bottom: px; Space below the image */
-    object-fit: cover; /* Ensure the image covers the container */
+.message-container p{
+    font-size: 150%;
+}
+
+.Chat-icon {
+    width: 15%;
 }
 
 /*------------------------------------------------------------------------------------------------------------------------*/
 /* Settings Tray Styling */
-.settings-tray {
+.header {
     background: #000;
     padding: 5px;
     border-radius: 15px;
@@ -611,7 +679,7 @@ input:focus {
     height: 65px; /* Space between profile and menu */
 }
 
-.settings-tray .friend-drawer {
+.header .friend-drawer {
     display: flex;
     align-items: center;
     width: 100%; /* Full width */
@@ -625,7 +693,7 @@ input:focus {
     object-fit: cover; /* Ensure the image covers the container */
 }
 
-.user-info {
+.user-name {
     flex: 1; /* Allow this section to take up available space */
     color: hsl(120, 6%, 75%);
 

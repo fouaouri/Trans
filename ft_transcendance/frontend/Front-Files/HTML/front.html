@@ -54,59 +54,6 @@
 		<template id="Regester">
 			<div class="rectangle">
 				<div class="top-header">
-					<h3>Sign Up, Now!</h<!-- <div class="row no-gutters">
-					
-						<aside class="col-md-4 border-right user-list" id="user-list-container">
-							<div class="search-box">
-								<div class="input-wrapper">
-									<i class="material-icons">search</i>
-									<input id="search-input" placeholder="Search users..." aria-label="Search users">
-								</div>
-							</div>
-							<ul id="user-list" class="list-group">
-								
-							</ul>
-						</aside>
-	
-						<section class="col-md-8 profile-panel" id="profile-container">
-							<div class="placeholder-message">
-								<img class="placeholder-image" src="../assets/images/chats.png" alt="No Chat">
-								<p>Select a user from the list to start a chat.</p>
-							</div>
-						</section>
-			
-						
-						<section class="col-md-8 chat-panel d-none" id="chat-container">
-							<div class="settings-tray">
-								<div class="friend-drawer">
-									
-									<img class="profile-image" src="" alt="Profile Picture">
-									<div class="user-info">
-										<h6 id="recipient-username"></h6>
-									</div>
-									<div class="settings-menu">
-										<i class="material-icons">menu</i>
-										<ul class="menu-options">
-											<li><a href="#" id="invite-game">Invite to Game</a></li>
-											<li><a href="#" id="clear-chat">Clear Chat</a></li>
-											<li><a href="#" id="block-user">Block User</a></li>
-											<li><a href="#" id="view-profile">View Profile</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-			
-							<div id="chat-box" class="chat-messages">
-							</div>
-			
-							<div class="chat-box-tray">
-								<input type="text" id="chat-input" placeholder="Type your message here...">
-								<button id="send-button" class="btn btn-dark">
-									<i class="material-icons">send</i>
-								</button>
-							</div>
-						</section>
-					</div> -->3>
 					<small>We are happy to have you with us.</small>
 				</div>
 				<form class="Info">
@@ -150,47 +97,178 @@
 			</div>
 		</template>
 		<template id="ProfileContent">
-				<fieldset id="User-Data">
-					<label class="circle"><img id="profile" alt="Your Image"></label>
+				<div id="User-Data">
+					<div class="match1">
+						<label class="circle"><img id="profile" src="../assets/images/fouaouri.jpeg" alt="Your Image"></label>
+						<div class="userinfo">
+							<label class="Title">Full name	: <h1 id="fullName"> Fatima Ezzahra Ouaourikt</h1></label>
 
-					<label class="Title">Full name	: <h1 id="fullName"></h1></label>
-						
-					<label class="Title">username	: <h1 id="userName"></h1></label>
-						
-					<label class="Title">Mail		: <h1 id="Mail"></h1></label>
-						
-					<label class="Title">Avatar		: <h1 id="Avatar"></h1></label>
-						
-					<label class="Title">City		: <h1 id="City"></h1></label>
-						
-				</fieldset>
-				<fieldset id="Add-Friend">
-					<label class="AddF"><h1 id="Discreption">Hi, I'm Toothless, a sleek black Night Fury with striking green eyes and incredible speed. Known for my powerful plasma blasts and unbreakable bond with my rider, Hiccup, I'm the ultimate flying companion and defender of Berk.</h1></label>
+							<label class="Title">username	: <h1 id="userName">Fouaouri</h1></label>
+								
+							<label class="Title">Mail		: <h1 id="Mail">fzouaourikt@gmail.com</h1></label>
+								
+							<label class="Title">Avatar		: <h1 id="Avatar">Toothless</h1></label>
 
-					<label class="AddF" id="Add-Friend-Button"><button>+ Add Friend</button></label>
-				</fieldset>
-			<div id="History"></div>
-			<div id="Friends-List"></div>
-			<div id="Achivements"></div>      
+							<label class="Title">Achievement	: <h1 id="Achievement">Gold</h1></label>
+
+							<label class="Title">City		: <h1 id="City">Benguerir</h1></label>
+						</div>
+					</div>
+				</div>
+				<div class="addfriend"id="Add-Friend">
+					<label class="Discreption"><h1 id="Discreption">Hi, I'm Toothless, a sleek black Night Fury with striking green eyes and incredible speed. Known for my powerful plasma blasts and unbreakable bond with my rider, Hiccup, I'm the ultimate flying companion and defender of Berk.</h1></label>
+
+					<button class="follow" id="follow">+ Follow</button>
+				</div>
+				<div class="History" id="HistoryList">
+					<div class="h3background">
+						<h3>History</h3>
+					</div>
+					<div class="history-container" id="HistoryContainer">
+						<div class="match">
+							<label class="mycircle"><img id="profile" src="../assets/images/fouaouri.jpeg" alt="Your Image"></label>
+							<p id="myscore">5</p>
+							<label class="vscircle"><img src="../assets/images/vs.png" id="profile" alt="Your Image"></label>
+							<p id="otherscore">7</p>
+							<label class="othercircle"><img id="otherprofile" src="../assets/images/fouaouri.jpeg" alt="otherImage"></label>
+						</div>
+						<div class="match">
+							<label class="mycircle"><img id="profile" src="../assets/images/fouaouri.jpeg" alt="Your Image"></label>
+							<p id="myscore">5</p>
+							<label class="vscircle"><img src="../assets/images/vs.png" id="profile" alt="Your Image"></label>
+							<p id="otherscore">1</p>
+							<label class="othercircle"><img id="otherprofile" src="../assets/images/fouaouri.jpeg" alt="otherImage"></label>
+						</div>
+						<div class="match">
+							<label class="mycircle"><img id="profile" src="../assets/images/fouaouri.jpeg" alt="Your Image"></label>
+							<p id="myscore">2</p>
+							<label class="vscircle"><img src="../assets/images/vs.png" id="profile" alt="Your Image"></label>
+							<p id="otherscore">7</p>
+							<label class="othercircle"><img id="otherprofile" src="../assets/images/fouaouri.jpeg" alt="otherImage"></label>
+						</div>
+						<div class="match">
+							<label class="mycircle"><img id="profile" src="../assets/images/fouaouri.jpeg" alt="Your Image"></label>
+							<p id="myscore">1</p>
+							<label class="vscircle"><img src="../assets/images/vs.png" id="profile" alt="Your Image"></label>
+							<p id="otherscore">0</p>
+							<label class="othercircle"><img id="otherprofile" src="../assets/images/fouaouri.jpeg" alt="otherImage"></label>
+						</div>
+					</div>	
+				</div>
+				<div class="friends-list" id="friendsList">
+					<div class="h3background">
+						<h3>Friends-list</h3>
+					</div>
+					<div class="friends-container" id="friendsContainer">
+						<div class="match">
+							<label class="mycircle"><img id="profile" src="../assets/images/fouaouri.jpeg" alt="Your Image"></label>
+							<p id="username">username</p>
+							<button class="follow" id="follow">+ Follow</button>
+						</div>
+						<div class="match">
+							<label class="mycircle"><img id="profile" src="../assets/images/fouaouri.jpeg" alt="Your Image"></label>
+							<p id="username">username1</p>
+							<button class="follow" id="follow">+ Follow</button>
+						</div>
+						<div class="match">
+							<label class="mycircle"><img id="profile" src="../assets/images/fouaouri.jpeg" alt="Your Image"></label>
+							<p id="username">username2</p>
+							<button class="follow" id="follow">+ Follow</button>
+						</div>
+						<div class="match">
+							<label class="mycircle"><img id="profile" src="../assets/images/fouaouri.jpeg" alt="Your Image"></label>
+							<p id="username">username3</p>
+							<button class="follow" id="follow">+ Follow</button>
+						</div>
+					</div>
+				</div>
+				<div class="Achievement">
+					<div class="match">
+						<label class="icon"><img id="icon" src="../assets/images/Bronze.png" alt="Bronze"></label>
+						<label class="process"><img id="Bronzeprocess" src="../assets/images/0process.png" alt="Bronze"></label>
+					</div>
+					<div class="match">
+						<label class="icon"><img id="icon" src="../assets/images/Silver.png" alt="Silver"></label>
+						<label class="process"><img id="Silverprocess" src="../assets/images/0process.png" alt="Silver"></label>
+					</div>
+					<div class="match">
+						<label class="icon"><img id="icon" src="../assets/images/Gold.png" alt="Gold"></label>
+						<label class="process"><img id="Goldprocess" src="../assets/images/0process.png" alt="Gold"></label>
+					</div>
+					<div class="match">
+						<label class="icon"><img id="icon" src="../assets/images/Platinium.png" alt="Platinium"></label>
+						<label class="process"><img id="Platiniumprocess" src="../assets/images/0process.png" alt="Platinium"></label>
+					</div>
+					<div class="match">
+						<label class="icon"><img id="icon" src="../assets/images/Diamond.png" alt="Diamond"></label>
+						<label class="process"><img id="Diamondprocess" src="../assets/images/0process.png" alt="Diamond"></label>
+					</div>
+				</div>
+				<script src="../JS/Profile.js" defer></script>
 		</template>
 
 
 		<template id="ChatContent">
 
 			<div class="container">
-				<div class="users-container" id="users-container">
 
-					<div class="person-selector" id="person-selector">
-						
+			<!-- select user and search box -->
+
+				<div class="col-md-4 border-right user-list" id="user-list-container">
+					<div class="search-box">
+						<div class="input-wrapper">
+							<img src="../assets/images/search.png"  alt="icon" class="material-icons">
+							<input id="search-input" placeholder="Search ..." aria-label="Search users">
+						</div>
 					</div>
+					<ul id="user-list" class="list-group">
+						<!-- User items will be populated dynamically by JavaScript -->
+
+					</ul>
 				</div>
+			<!-- Chat content and message input -->
+
+				<!-- before shoosing a user to start chat -->
+				<section class="col-md-8 profile-panel" id="profile-container">
+					<div class="message-container">
+						<img class="Chat-icon" src="../assets/images/Chat-icon.png" alt="Chat-icon">
+						<p>Start a chat ....</p>
+					</div>
+				</section>
+
+				<!-- Chat room is active -->
+
+				<section class="col-md-8 chat-panel d-none" id="chat-container">
+					<!-- the header  -->
+					<div class="header">
+						<div class="friend-drawer">
+							<img id="profile-image" alt="profile">
+
+							<div class="user-name">
+								<p id="other-username">other-username</p>
+							</div>
+						</div>
+					</div>
+					<!-- render messages between two users -->
+					<div id="chat-box" class="chat-messages">
+						<!-- Chat messages will be dynamically loaded here -->
+					</div>
+					<!-- send message box section -->
+					<div class="chat-box-tray">
+						<input type="text" id="chat-input" placeholder="Type your message here...">
+						<button id="send-button" class="btn btn-dark">
+							<i class="material-icons">send</i>
+						</button>
+					</div>
+				</section>
+				
 			</div>
-			<link rel="stylesheet" href="../Css/Chat.css">
-			<!-- <link rel="stylesheet" href="../Css/bootstrap.css">
+			<link rel="stylesheet" href="../Css/Chat.css" defer>
+			<link rel="stylesheet" href="../Css/bootstrap.css">
 			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 			<script src="../JS/jquery-3.7.1.slim.min.js" ></script>
 			<script src="../JS/popper.min.js" defer></script>
-			<script src="../JS/bootstrap.js" defer></script> -->
+			<script src="../JS/bootstrap.js" defer></script>
 			<script src="../JS/Chat.js" defer></script>
 
 		</template>
@@ -517,7 +595,9 @@
 			</div>
 		</div>
 	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-	<script src="../JS/front.js"></script>
+	<script src="../JS/front.js" defer></script>
 </body>
 </html>
 
+<!-- name     	:  Fatima
+username    :  Fouaouri -->

@@ -39,41 +39,66 @@ body, html {
 }
 
 .Title{
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
     color: #ffffff;
     font-family: monospace;
     font-size: 120%;
-    display: flex;
-    align-items: center;
-    gap: 10%;
-
 }
+
 
 
 .Title h1 {
     margin: 0;
     font-size: 18px;
-    color: white;
+    color: rgb(175, 234, 187);
 }
-#User-Data {
-    position: absolute;
+
+.userinfo{
+
     display: flex;
     flex-direction: column;
+
+    justify-content: space-between;
+    color: #ffffff;
+    font-family: monospace;
+    font-size: 120%;
+    gap: 10%;
+}
+
+.match1 {
+    display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 5% 0;
+        gap: 50px;
+}
+
+#User-Data {
+    position: absolute;
+    position: absolute;
     gap: 30px;
-    padding: 20px;
-    right: 10%;
-    top: 20%;
-    width: 40%;
-    border-radius: 10px;
-    background-color: rgb(20 51 33 / 70%);
-    box-shadow: 0 0 50px rgba(0, 255, 0, 0.90);
+    padding: 0 50px;
+    left: 5%;
+    top: 15%;
+    background-color: rgba(8, 59, 29, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.9);
+    margin: 16px auto;
+    height: 30%;
+    width: 80%;
+    max-width: 700px;
 }
 
 .circle {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 10%;
-    right: 2%;
-    width: 30%;
-    height: 85%;
+    left: 5%;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -83,31 +108,27 @@ body, html {
 }
 
 .circle img {
-    position: absolute;
-    width: 170%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 #Add-Friend {
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    padding: 20px;
-    left: 5%;
-    top: 20%;
-    width: 35%;
-    border-radius: 10px;
-    background-color: rgb(20 51 33 / 70%);
-    box-shadow: 0 0 50px rgba(0, 255, 0, 0.90);
-}
-.AddF{
-    display: flex;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    flex-direction: column;
     align-items: center;
+    padding: 20px;
+    right: 7%;
+    top: 15%;
+    width: 35%;
+}
+
+.Discreption{
+    margin-bottom: 3%;
+    font-size: 150%;
+    font-family: 'Carbo', serif;
     color: #ffffff;
 }
 
@@ -121,30 +142,250 @@ fieldset {
     font-family: monospace;
 }
 
-#Add-Friend-Button {
+.History {
     position: absolute;
-    left: 30%;
-    font-size: 70%;
-
+    gap: 30px;
+    padding: 20px;
+    right: 40%;
+    bottom: 10%;
+    background-color: rgba(8, 59, 29, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.9);
+    margin: 16px auto;
+    height: 35%;
+    overflow-y: auto;
+    width: 80%;
+    max-width: 500px;
+    scrollbar-width: thin;
+    scrollbar-color: #00ff22 #00ff22;
 }
 
-#Add-Friend-Button button {
+.match {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10%;
+    gap: 20px;
+}
+.h3background{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgb(0, 14, 6);
+    padding: 20px 20px 10px 20px;
+}
+h3 {
+    display: flex;
+    color: white;
+    justify-content: center;
     font-family: 'Carbo', serif;
-    font-style: normal;
-    color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.90);
-    text-shadow: 0 0 20px rgba(3, 63, 3, 0.9);
-    border-radius: 10px;
+    font-size: 150%;
+}
+#myscore,
+#otherscore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Carbo', serif;
+    font-size: 150%;
+}
+.mycircle,
+.othercircle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ccc;
+    overflow: hidden;
 }
 
-#Add-Friend-Button:hover{
-    color: #ffffff;
-    box-shadow: 0 0 10px  #54ec99, 0 0 20px #54ec99, 0 0 30px #54ec99;
-    background-color: #54ec99;
-    transform: scale(1.1);
-    border-radius: 10px;
-    cursor: pointer;
+.mycircle img,
+.othercircle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
+
+.vscircle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 10%;
+    border-radius: 50%;
+    margin: 0 10%;
+    background-color: #ccc;
+    overflow: hidden;
+}
+.vscircle img{
+    position: absolute;
+    width: 12%;
+    height: auto;
+    object-fit: cover;
+}
+  /* Webkit scrollbar (Chrome, Safari, Edge) */
+  .History::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .History::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 100px;
+  }
+  
+  .History::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 100px;
+  }
+  
+  .History::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Spacing for history items if you have any */
+  .History > * {
+    margin-bottom: 8px;
+  }
+  
+  .History > *:last-child {
+    margin-bottom: 0;
+  }
+
+  #follow{
+    background-color: rgb(0 255 107 / 57%);
+    box-shadow: 0 0 50px rgb(0 0 0);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 1% 4%;
+    font-size: 120%;
+    font-family: 'Carbo', serif;
+  }
+
+  #follow:hover {
+    background-color: #16a34a;
+}
+  #username{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-left: 5%;
+    font-family: 'Carbo', serif;
+    font-size: 150%;
+}
+
+
+/* friends list scrolling */
+
+
+  .friends-list {
+    position: absolute;
+    gap: 30px;
+    padding: 20px;
+    right: 10%;
+    bottom: 10%;
+    background-color: rgba(8, 59, 29, 0.7);
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.9);
+    margin: 16px auto;
+    height: 35%;
+    overflow-y: auto;
+    width: 80%;
+    max-width: 500px;
+    scrollbar-width: thin;
+     
+}
+
+.friends-container {
+    height: calc(100% - 40px);
+    position: relative;
+    transition: transform 0.5s ease;
+}
+.history-container {
+    height: calc(100% - 40px);
+    position: relative;
+    transition: transform 0.5s ease;
+}
+  .friends-list::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .friends-list::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 100px;
+  }
+  
+  .friends-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 100px;
+  }
+  
+  .friends-list::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Spacing for friends-list items if you have any */
+  .friends-list > * {
+    margin-bottom: 8px;
+  }
+  
+  .friends-list > *:last-child {
+    margin-bottom: 0;
+  }
+
+/* friends list scrolling */
+
+
+/* Achievements */
+.Achievement {
+    position: absolute;
+    gap: 30px;
+    padding: 20px;
+    left: 0;
+    bottom: 8%;
+    height: 40%;
+    width: 100%;
+    max-width: 600px;
+}
+.Achievement .match{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3%;
+    gap: 20px;
+}
+.icon,
+.process {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.process{
+    width: 350px;
+    height: 30px;
+}
+.icon{
+    width: 60px;
+    height: 60px;
+}
+.icon img,
+.process img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* border-radius: 50%; */
+}
+
 
 .button-Settings {
     position: absolute;
