@@ -45,6 +45,8 @@ function navigateTo(content, cssFile, path) {
     
     if(cssFile === '../Css/Chat.css')
         loadCssFile('../Css/Chat.css', '../Css/bootstrap.css', "https://fonts.googleapis.com/icon?family=Material+Icons");
+    // else if(cssFile === '../Css/ChooseGame.css')
+    //     loadCssFile('../Css/ChooseGame.css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css')
     else
         loadCssFile(cssFile);
     LoadContent(content);
@@ -110,24 +112,6 @@ function SettingContent(){
     document.getElementById('Edit').addEventListener('click', (e) => {
         e.preventDefault();
         navigateTo('EditContent', '../Css/Edit.css',  '/Edit');
-    });
-}
-
-function ChooseGame(){
-    document.getElementById('ping-pong').addEventListener('click', (e) => {
-        e.preventDefault();
-        navigateTo('ChooseAi', '../Css/Ai.css',  '/AiorPlayer'); 
-    });
-    document.getElementById('star-wars').addEventListener('click', (e) => {
-        e.preventDefault();
-        navigateTo('StarWars', '../Css/StarWars.css',  '/StarWars');
-    });
-}
-
-function Aigame(){
-    document.getElementById('playAI').addEventListener('click', (e) => {
-        e.preventDefault();
-        navigateTo('AIgame', '../Css/3d.css',  '/AIgame');     
     });
 }
 
@@ -220,22 +204,14 @@ function LoadContent(templateId){
             navigateTo('firstContent', '../Css/first_page.css',  '/LoginPage')
         });
     }
-    // if(templateId === 'ChatContent')
-    //     ChatContent();
     if(templateId === 'homeContent')
         HomeContent();
     if(templateId === 'gameContent')
         GameContent();
     if(templateId === 'settingContent')
         SettingContent();
-    if(templateId === 'ChooseGame')
-        ChooseGame();
     if(templateId === 'EditContent')
         EditContent();
-    if(templateId === 'ChooseAi')
-        Aigame();
-    // if(templateId === 'ProfileContent')
-    //     ProfileContent();
     if(templateId === 'Regester'){
         const info = document.querySelector('.Info');
 

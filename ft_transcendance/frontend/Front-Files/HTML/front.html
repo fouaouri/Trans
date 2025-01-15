@@ -255,7 +255,7 @@
 					</div>
 					<!-- send message box section -->
 					<div class="chat-box-tray">
-						<input type="text" id="chat-input" placeholder="Type your message here...">
+						<input type="text" id="chat-input" name="sended-message" placeholder="Type your message here...">
 						<button id="send-button" class="btn btn-dark">
 							<i class="material-icons">send</i>
 						</button>
@@ -298,22 +298,7 @@
 					</div>
 				</div>
 		</template>
-		<template id="AIgame">
-			<!-- <script type="importmap">
-				{
-				  "imports": {
-					"three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.js",
-					"three/addons/": "https://cdn.jsdelivr.net/npm/three@<version>/examples/jsm/"
-				  }
-				}
-			  </script> -->
-			<script type="module" crossorigin src="../JS/index-ZMH8g1mx.js"></script>
-		</template>
-		<template id="StarWars">
-			<!-- <script type="module" crossorigin src="../JS/main-TMWcyKWO.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-			<script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script> -->
-		</template>
+
 		<template id="tournoiContent">
 			<div class="circle">
 				<img src="../assets/images/ranking.png" alt="Your Image">
@@ -380,27 +365,26 @@
 		</template>
 
 		<template id="ChooseGame">
-			<h1> CHOOSE A GAME </h1>
-			<div class="star-wars">
-				<img src="../assets/images/starwars.png" alt="image">
-					<div class="star-button">
-						<button id="star-wars">STAR WARS</button>
-					</div>
+			<div class="menu-container">
+				<div class="menu1 text-center" id="menu">
+					<h1>Ping Pong Game</h1>
+					<button id="playLocal" class="btn btn-primary">Play Local</button>
+					<button id="playOnline" class="btn btn-primary">Play Online</button>
+				</div>
 			</div>
-			<div class="Ping-pong">
-				<!-- <div class="hiden-choices">
-					<div class="ChooseAi">
-						<button>Play with AI</button>
-					</div>
-					<div class="ChoosePlayer">
-						<button>Play with other Players</button>
-					</div>
-				</div> -->
-				<img src="../assets/images/ping-pong.png" alt="image">
-				<div class="ping-button">
-					<button id="ping-pong">PING PONG</button>
-				</div>  
+
+			<div class="nickname-input" id="nicknameInput" style="display: none;">
+				<h2>Enter Player Nicknames</h2>
+				<input type="text" id="player1Name" class="form-control" placeholder="Player 1 Nickname">
+				<input type="text" id="player2Name" class="form-control" placeholder="Player 2 Nickname">
+				<button id="startLocalGame" class="btn btn-success">Start Game</button>
 			</div>
+			<!-- Local Game Canvas -->
+			<canvas id="localGameCanvas" width="600" height="400"></canvas>
+    
+			<!-- Online Game Canvas -->
+			<canvas id="onlineGameCanvas" width="600" height="400"></canvas>
+			<script src="../JS/PingPong.js"></script>
 		</template>
 
 		<template id="ChooseAi">
@@ -431,7 +415,7 @@
 			</div>
 		</template>
 
-		<template id="Avatar1">
+		<!-- <template id="Avatar1">
 			<div class="circle">
 				<img src="../assets/images/Toothless.png" alt="Your Image">
 			</div>
@@ -571,7 +555,7 @@
 				<div class="switch_right" id="r_click"><img src="../assets/images/r_switch.png" alt="right Image"></div>
 				<div class="switch_left" id="l_click"><img src="../assets/images/l_switch.png" alt="left Image"></div>
 			</div>
-		</template>
+		</template> -->
 		<!-- the fix part in the page -->
 		<div class="Welcome">
 			<img src="../assets/images/logo.png" alt="Logo" class="logo"> 

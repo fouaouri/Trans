@@ -124,7 +124,6 @@ button {
     display: flex;
     flex-direction: column;
     padding: 5% 0;
-    /* box-shadow: 3px 0px 6px hsl(0, 2%, 58%); */
     border-radius: 20px;
   }
 
@@ -133,7 +132,9 @@ button {
     padding: 2% 0;
     margin-bottom: 8%;
 }
-
+#chat-container {
+    height: 1000px; /* Set to your desired height */
+  }
 .divider{
     border-bottom: 1px solid #888989;
     margin: 6% 0;

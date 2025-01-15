@@ -36,6 +36,29 @@ function showMessages(selectedUser) {
     };
 }
 
+
+function startChating(user){
+    
+    const socket = new WebSocket('ws://localhost:8000');
+
+    socket.addEventListener('open', () => {
+        console.log('Connected to the WebSocket server');
+      });
+      socket.addEventListener('message', (event) => {
+        console.log('Message from server:', event.data);
+      });
+
+      const input = document.getElementById('chat-input');
+      input.addEventListener('submit', (event) => {
+            event.defaultPrevented();
+            const messageinput = new FormData(input);
+            console.log('message : ', messageinput.get('sended-message'));
+      })
+      socket.addEventListener('open', () => {
+        socket.send(JSON.stringify({ user: user , message: messageinput.get('sended-message') }));
+      });
+}
+
 function userList(users) {
     const userList = document.getElementById('user-list');
 
@@ -51,8 +74,9 @@ function userList(users) {
             console.log(`Clicked on user: ${user}`);
             // event.stopPropagation();
             showMessages(user);
+            startChating(user);
         });
-        console.log("User list after append:", userList);
+        // console.log("User list after append:", userList);
     });
 
 
